@@ -5,8 +5,7 @@ import java.util.List;
 public class ListProductResponse {
     private List<Product> products;
 
-    public ListProductResponse(){
-
+    public ListProductResponse() {
     }
 
     public ListProductResponse(List<Product> products) {

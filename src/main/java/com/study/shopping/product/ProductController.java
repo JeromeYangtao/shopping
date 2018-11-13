@@ -6,6 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
+
 @RestController
 public class ProductController {
     private CreateProductRequestValidator createProductRequestValidator;
@@ -26,7 +28,7 @@ public class ProductController {
      * Get products
      */
     @GetMapping("/products/{productId}")
-    public ResponseEntity<GetProductResponse> getProduct(@PathVariable String productId) {
+    public ResponseEntity<GetProductResponse> getProduct(@PathVariable String productId) throws SQLException {
         return new ResponseEntity<>(new GetProductResponse(), HttpStatus.OK);
     }
 
