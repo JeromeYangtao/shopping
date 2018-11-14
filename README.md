@@ -8,3 +8,4 @@ Spring Boot 开发电商系统
 TODOList:
 [ ] 用户user 增删改查
 [ ] 单元测试
+[ ] 登录注册
