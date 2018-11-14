@@ -1,15 +1,19 @@
 package com.study.shopping.product.model;
 
+import com.study.shopping.Property;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import java.sql.*;
 
 public class GetProductResponse {
     private Product product;
 
-    public GetProductResponse() throws SQLException {
-        final String DB_PATH = "jdbc:sqlite:resources/shopping.db";
-        String query = "SELECT * FROM `PRODUCT` WHERE id = 1";
 
-        Connection connection = DriverManager.getConnection(DB_PATH);
+    public GetProductResponse() throws SQLException {
+        String query = "SELECT * FROM `PRODUCT` WHERE id = 1";
+        Property property = new Property();
+        Connection connection = DriverManager.getConnection(property.getDB_PATH());
         Statement statement = connection.createStatement();
         ResultSet rs = statement.executeQuery(query);
 
@@ -32,4 +36,5 @@ public class GetProductResponse {
     public void setProduct(Product product) {
         this.product = product;
     }
+
 }
