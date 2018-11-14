@@ -13,4 +13,8 @@ public class UserController {
     public User listUser() {
         return new User(1, "name");
     }
+    @GetMapping("/test")
+    public String getUser(){
+        return "test";
+    }
 }
