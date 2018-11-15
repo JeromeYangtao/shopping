@@ -1,19 +1,21 @@
 package com.study.shopping.user.model;
 
 public class User {
-    private int id;
+    private Long id;
     private String name;
+    private Integer age;
 
-    public User(int id, String name) {
+    public User(Long id, String name, Integer age) {
         this.id = id;
         this.name = name;
+        this.age = age;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -23,5 +25,13 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

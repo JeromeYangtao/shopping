@@ -1,7 +1,9 @@
 package com.study.shopping.product;
 
+import com.study.shopping.Property;
 import com.study.shopping.product.model.*;
 import com.study.shopping.product.validator.CreateProductRequestValidator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +12,7 @@ import java.sql.SQLException;
 
 @RestController
 public class ProductController {
+
     private CreateProductRequestValidator createProductRequestValidator;
 
     public ProductController(CreateProductRequestValidator createProductRequestValidator) {
