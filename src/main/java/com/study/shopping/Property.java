@@ -9,6 +9,7 @@ public class Property {
 
     public String getDB_PATH() {
         return DB_PATH;
+
     }
 
     public void setDB_PATH(String DB_PATH) {
