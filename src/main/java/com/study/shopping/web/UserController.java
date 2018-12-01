@@ -51,7 +51,7 @@ public class UserController {
     @ApiOperation(value="删除用户", notes="根据url的id来指定删除对象")
     @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long")
     @DeleteMapping("/{id}")
-    public String deleteUser(@PathVariable Long id, @ModelAttribute User user) {
+    public String deleteUser(@PathVariable Long id) {
         users.remove(id);
         return "success";
     }
