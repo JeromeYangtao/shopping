@@ -11,8 +11,4 @@ public class Property {
         return DB_PATH;
 
     }
-
-    public void setDB_PATH(String DB_PATH) {
-        this.DB_PATH = DB_PATH;
-    }
 }
