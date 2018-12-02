@@ -1,30 +1,25 @@
-package com.study.shopping.order.model;
+package com.study.shopping.cart.model;
 
 import com.study.shopping.product.model.Product;
 import com.study.shopping.user.model.User;
 
-//订单
-public class Order {
+public class CartItem {
     private long id;
     private User user;
     private Product product;
     private long quantity;
-    private String status;
-    private String address;
 
-    public Order(User user, Product product, long quantity, String status, String address) {
+    public CartItem(User user, Product product, long quantity) {
         this.user = user;
         this.product = product;
         this.quantity = quantity;
-        this.status = status;
-        this.address = address;
     }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -50,21 +45,5 @@ public class Order {
 
     public void setQuantity(long quantity) {
         this.quantity = quantity;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 }

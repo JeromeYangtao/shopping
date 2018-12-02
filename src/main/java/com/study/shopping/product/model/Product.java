@@ -1,19 +1,18 @@
 package com.study.shopping.product.model;
 
 public class Product {
-    private Integer id;
+    private long id;
     private String name;
     private String description;
     private long price;
 
-    public Product(Integer id, String name, String description, long price) {
-        this.id = id;
+    public Product(String name, String description, long price) {
         this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
