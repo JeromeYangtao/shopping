@@ -5,6 +5,9 @@ import com.study.shopping.web.cart.model.CartItem;
 public class GetCartItemResponse {
     CartItem item;
 
+    public GetCartItemResponse() {
+    }
+
     public GetCartItemResponse(CartItem item) {
         this.item = item;
     }

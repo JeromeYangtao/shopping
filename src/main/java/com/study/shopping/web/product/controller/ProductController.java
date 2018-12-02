@@ -48,7 +48,6 @@ public class ProductController {
         } else {
             return new ResponseEntity<>(new CreateProductResponse(), HttpStatus.BAD_REQUEST);
         }
-
     }
 
     /**
