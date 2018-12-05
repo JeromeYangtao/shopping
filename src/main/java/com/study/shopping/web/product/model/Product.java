@@ -1,10 +1,25 @@
 package com.study.shopping.web.product.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "product")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "price")
     private long price;
+
+    public Product() {
+    }
 
     public Product(String name, String description, long price) {
         this.name = name;
