@@ -3,10 +3,22 @@ package com.study.shopping.web.cart.model;
 import com.study.shopping.web.product.model.Product;
 import com.study.shopping.web.user.model.User;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "cart_item")
 public class CartItem {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "user")
     private User user;
+
+    @Column(name = "product")
     private Product product;
+
+    @Column(name = "quantity")
     private long quantity;
 
     public CartItem(User user, Product product, long quantity) {

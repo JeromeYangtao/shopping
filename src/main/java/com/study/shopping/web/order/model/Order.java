@@ -3,13 +3,29 @@ package com.study.shopping.web.order.model;
 import com.study.shopping.web.product.model.Product;
 import com.study.shopping.web.user.model.User;
 
+import javax.persistence.*;
+
 //订单
+@Entity
+@Table(name = "order")
 public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "user")
     private User user;
+
+    @Column(name = "product")
     private Product product;
+
+    @Column(name = "quantity")
     private long quantity;
+
+    @Column(name = "status")
     private String status;
+
+    @Column(name = "address")
     private String address;
 
     public Order(User user, Product product, long quantity, String status, String address) {
