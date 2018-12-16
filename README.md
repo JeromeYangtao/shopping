@@ -1,4 +1,4 @@
-Spring Boot 开发电商系统，个人学习练手项目
+Java Spring Boot 开发电商系统接口，个人学习练手项目
 
 
 

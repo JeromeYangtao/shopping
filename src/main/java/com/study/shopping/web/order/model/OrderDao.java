@@ -8,9 +8,11 @@ import java.util.List;
 @Repository
 public interface OrderDao extends CrudRepository<Order,Long> {
 
-    Order getById();
+    Order getById(long id);
 
     List<Order> findAll();
 
     Order save(Order order);
+
+    void delete (Order order);
 }
